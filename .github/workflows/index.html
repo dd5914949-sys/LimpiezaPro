@@ -1,0 +1,652 @@
+<!DOCTYPE HTML>
+<!--
+	ClearPath Cleaning Co. — PEPP Program
+	Built on Paradigm Shift by HTML5 UP (html5up.net | @ajlkn)
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>ClearPath Cleaning Co. — Proudly PEPP | London, ON</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="ClearPath Cleaning Co. — Hospital-grade home cleaning for Victoria Hospital and surrounding healthcare staff in London, Ontario. PEPP program participants." />
+		<meta name="keywords" content="cleaning, London Ontario, Victoria Hospital, LHSC, PEPP, hospital staff, home cleaning, deep clean" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* ── PEPP badge pill ── */
+			.pepp-badge {
+				display: inline-block;
+				background: #43d9b8;
+				color: #000;
+				font-family: "Raleway", Helvetica, sans-serif;
+				font-size: 0.6rem;
+				font-weight: 800;
+				letter-spacing: 0.2em;
+				text-transform: uppercase;
+				padding: 0.35em 0.9em;
+				border-radius: 2em;
+				margin-bottom: 1.2rem;
+				border-bottom: none;
+			}
+
+			/* ── Stats row ── */
+			.stat-strip {
+				display: flex;
+				gap: 2rem;
+				flex-wrap: wrap;
+				margin: 2.5rem 0 0 0;
+				padding: 0;
+				list-style: none;
+			}
+			.stat-strip li {
+				text-align: left;
+			}
+			.stat-strip .num {
+				display: block;
+				font-family: "Source Sans Pro", Helvetica, sans-serif;
+				font-size: 2rem;
+				font-weight: 700;
+				color: #43d9b8;
+				line-height: 1;
+			}
+			.stat-strip .lbl {
+				display: block;
+				font-size: 0.55rem;
+				font-family: "Raleway", Helvetica, sans-serif;
+				letter-spacing: 0.18em;
+				text-transform: uppercase;
+				color: rgba(0,0,0,0.45);
+				margin-top: 0.2em;
+			}
+
+			/* ── Highlight callout box ── */
+			.callout-box {
+				background: rgba(67, 217, 184, 0.1);
+				border-left: 3px solid #43d9b8;
+				padding: 1.2rem 1.5rem;
+				margin: 1.5rem 0 2rem 0;
+				border-radius: 0 0.25rem 0.25rem 0;
+			}
+			.callout-box strong {
+				display: block;
+				font-family: "Raleway", Helvetica, sans-serif;
+				font-size: 0.7rem;
+				letter-spacing: 0.175em;
+				text-transform: uppercase;
+				color: #000;
+				margin-bottom: 0.5rem;
+			}
+			.callout-box p {
+				margin: 0;
+				font-size: 0.9rem;
+				color: rgba(0,0,0,0.65);
+				line-height: 1.8;
+			}
+
+			/* ── Testimonial card ── */
+			.testimonial-card {
+				border-left: 3px solid rgba(67,217,184,0.4);
+				padding: 1rem 1.5rem;
+				margin: 0 0 2rem 0;
+				background: rgba(67,217,184,0.04);
+				border-radius: 0 0.25rem 0.25rem 0;
+			}
+			.testimonial-card blockquote {
+				border-left: none;
+				padding: 0;
+				margin: 0 0 0.75rem 0;
+				font-size: 0.95rem;
+				color: rgba(0,0,0,0.75);
+			}
+			.testimonial-card .attribution {
+				font-family: "Raleway", Helvetica, sans-serif;
+				font-size: 0.6rem;
+				letter-spacing: 0.15em;
+				text-transform: uppercase;
+				color: #43d9b8;
+			}
+			.star-row { color: #43d9b8; letter-spacing: 0.1em; margin-bottom: 0.5rem; font-size: 0.85rem; }
+
+			/* ── Service pills grid ── */
+			.service-pills {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.6rem;
+				margin: 0 0 2rem 0;
+				padding: 0;
+				list-style: none;
+			}
+			.service-pills li {
+				background: rgba(67,217,184,0.12);
+				border: 1px solid rgba(67,217,184,0.35);
+				border-radius: 2em;
+				padding: 0.3em 0.9em;
+				font-family: "Raleway", Helvetica, sans-serif;
+				font-size: 0.6rem;
+				font-weight: 600;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				color: #000;
+			}
+
+			/* ── Contact items styling ── */
+			#wrapper section > footer ul.items li h3 {
+				font-size: 0.6rem;
+				color: rgba(0,0,0,0.5);
+			}
+
+			/* ── Success notice (hidden by default) ── */
+			.form-success {
+				display: none;
+				background: rgba(67,217,184,0.15);
+				border: 1px solid #43d9b8;
+				border-radius: 0.25rem;
+				padding: 1rem 1.5rem;
+				margin-top: 1rem;
+				text-align: center;
+				font-family: "Raleway", Helvetica, sans-serif;
+				font-size: 0.75rem;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+				color: #000;
+			}
+			.form-success.visible { display: block; }
+
+			/* ── Hero image overlay text ── */
+			.hero-over {
+				position: absolute;
+				bottom: 2.5rem;
+				left: 2.5rem;
+				z-index: 2;
+				pointer-events: none;
+			}
+			.hero-over span {
+				display: inline-block;
+				background: rgba(0,0,0,0.55);
+				backdrop-filter: blur(6px);
+				color: #fff;
+				font-family: "Raleway", Helvetica, sans-serif;
+				font-size: 0.6rem;
+				font-weight: 600;
+				letter-spacing: 0.18em;
+				text-transform: uppercase;
+				padding: 0.5em 1em;
+				border-radius: 2em;
+				border-left: 3px solid #43d9b8;
+			}
+
+			/* ── Pricing table ── */
+			.pricing-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 1rem;
+				margin: 0 0 2rem 0;
+			}
+			.price-card {
+				border: 1px solid rgba(144,144,144,0.25);
+				border-radius: 0.35rem;
+				padding: 1.2rem;
+				position: relative;
+			}
+			.price-card.featured {
+				border-color: #43d9b8;
+				background: rgba(67,217,184,0.05);
+			}
+			.price-card .price-label {
+				font-family: "Raleway", Helvetica, sans-serif;
+				font-size: 0.58rem;
+				letter-spacing: 0.18em;
+				text-transform: uppercase;
+				font-weight: 800;
+				color: rgba(0,0,0,0.5);
+				margin-bottom: 0.4rem;
+				display: block;
+			}
+			.price-card.featured .price-label { color: #43d9b8; }
+			.price-card .service-name {
+				font-family: "Raleway", Helvetica, sans-serif;
+				font-size: 0.75rem;
+				font-weight: 800;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+				margin-bottom: 0.3rem;
+			}
+			.price-card .price-desc {
+				font-size: 0.8rem;
+				line-height: 1.6;
+				color: rgba(0,0,0,0.55);
+				margin: 0;
+			}
+			.price-badge {
+				position: absolute;
+				top: -0.6rem;
+				right: 0.75rem;
+				background: #43d9b8;
+				color: #000;
+				font-family: "Raleway", Helvetica, sans-serif;
+				font-size: 0.5rem;
+				font-weight: 800;
+				letter-spacing: 0.15em;
+				text-transform: uppercase;
+				padding: 0.2em 0.7em;
+				border-radius: 2em;
+			}
+
+			@media screen and (max-width: 736px) {
+				.pricing-grid { grid-template-columns: 1fr; }
+				.stat-strip { gap: 1.2rem; }
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- ═══════════════════════════════════════════════
+			     INTRO — Hero
+			     ═══════════════════════════════════════════════ -->
+			<section class="intro">
+				<header>
+					<span class="pepp-badge">✦ PEPP Program Participant</span>
+					<h1>ClearPath<br>Cleaning<br>Co.</h1>
+					<p>Hospital-grade home cleaning<br>for London's healthcare community</p>
+					<ul class="actions">
+						<li><a href="#about" class="arrow scrolly"><span class="label">Next</span></a></li>
+					</ul>
+				</header>
+				<div class="content">
+					<!-- Picsum placeholder — swap for your own photo -->
+					<span class="image fill" data-position="center">
+						<img
+							src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80"
+							alt="Professional cleaning supplies and sparkling clean home"
+						/>
+					</span>
+					<div class="hero-over">
+						<span>🏥 Proudly serving Victoria Hospital &amp; LHSC staff, London ON</span>
+					</div>
+				</div>
+			</section>
+
+			<!-- ═══════════════════════════════════════════════
+			     SECTION 1 — About / PEPP
+			     ═══════════════════════════════════════════════ -->
+			<section id="about">
+				<header>
+					<h2>A Clean Home.<br>A Stronger<br>Community.</h2>
+				</header>
+				<div class="content">
+					<p><strong>ClearPath Cleaning Co.</strong> was founded through the <strong>PEPP (Placement &amp; Employment Pathways Program)</strong> — a London-area initiative that supports individuals in building meaningful, lasting careers through community-rooted employment. Every booking directly empowers a program participant.</p>
+
+					<div class="callout-box">
+						<strong>✦ About the PEPP Program</strong>
+						<p>PEPP helps participants gain real-world skills, sustainable income, and confidence through supported employment. Hiring ClearPath means your clean home also fuels a stronger local economy.</p>
+					</div>
+
+					<p>We are particularly proud to serve the dedicated staff of <strong>Victoria Hospital, University Hospital, St. Joseph's Health Care, Parkwood Institute,</strong> and the <strong>Children's Hospital</strong> — healthcare professionals who give everything on shift and deserve to come home to a spotless, peaceful space.</p>
+
+					<ul class="stat-strip">
+						<li><span class="num">200+</span><span class="lbl">Happy Clients</span></li>
+						<li><span class="num">5 ★</span><span class="lbl">Avg. Rating</span></li>
+						<li><span class="num">100%</span><span class="lbl">Insured &amp; Bonded</span></li>
+						<li><span class="num">PEPP</span><span class="lbl">Certified Team</span></li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- ═══════════════════════════════════════════════
+			     SECTION 2 — Services
+			     ═══════════════════════════════════════════════ -->
+			<section id="services">
+				<header>
+					<h2>Services Built Around Your Life</h2>
+				</header>
+				<div class="content">
+					<p><strong>We know healthcare schedules don't follow a 9-to-5.</strong> That's why every ClearPath service is flexible, reliable, and designed to fit around your shifts — from a weekly tidy to a full move-out deep clean.</p>
+
+					<ul class="feature-icons">
+						<li class="icon solid fa-broom">
+							<strong>Standard Home Clean</strong><br>
+							Kitchen, bathrooms, living areas, vacuuming &amp; mopping. Ideal for weekly or bi-weekly upkeep.
+						</li>
+						<li class="icon solid fa-star">
+							<strong>Deep Clean</strong><br>
+							Top-to-bottom: inside appliances, baseboards, window sills &amp; hard-to-reach areas. Perfect for a first visit.
+						</li>
+						<li class="icon solid fa-clock">
+							<strong>Post-Shift Express</strong><br>
+							A focused 2-hour tidy for healthcare workers coming off a long shift. Kitchen, bathroom &amp; living essentials.
+						</li>
+						<li class="icon solid fa-box-open">
+							<strong>Move In / Move Out</strong><br>
+							Complete cleaning before or after a move — inside cupboards, all surfaces &amp; appliances.
+						</li>
+						<li class="icon solid fa-leaf">
+							<strong>Eco-Friendly Clean</strong><br>
+							All-natural, fragrance-free, low-VOC products — ideal for sensitivities or a greener home.
+						</li>
+						<li class="icon solid fa-calendar-check">
+							<strong>Recurring Packages</strong><br>
+							Weekly, bi-weekly or monthly plans with discounted rates. Set it and forget it.
+						</li>
+					</ul>
+
+					<!-- Pricing cards -->
+					<div class="pricing-grid">
+						<div class="price-card featured">
+							<div class="price-badge">Most Popular</div>
+							<span class="price-label">Standard</span>
+							<div class="service-name">Home Clean</div>
+							<p class="price-desc">Weekly / bi-weekly maintenance package. Great value for busy professionals.</p>
+						</div>
+						<div class="price-card">
+							<span class="price-label">Hospital Staff Special</span>
+							<div class="service-name">Post-Shift Express</div>
+							<p class="price-desc">2-hour focused clean. Show your hospital badge for a discounted rate.</p>
+						</div>
+						<div class="price-card">
+							<span class="price-label">Green Option</span>
+							<div class="service-name">Eco-Friendly</div>
+							<p class="price-desc">Fragrance-free, plant-based products. Safe for allergy sufferers &amp; children.</p>
+						</div>
+						<div class="price-card featured">
+							<div class="price-badge">Best Value</div>
+							<span class="price-label">Recurring</span>
+							<div class="service-name">Monthly Package</div>
+							<p class="price-desc">Commit to monthly cleans and save. No lock-in contracts — cancel anytime.</p>
+						</div>
+					</div>
+
+					<ul class="actions">
+						<li><a href="#contact" class="button primary large scrolly">Book a Service</a></li>
+						<li><a href="#why" class="button large scrolly">Why Choose Us</a></li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- ═══════════════════════════════════════════════
+			     SECTION 3 — Why Us (with nested subsections)
+			     ═══════════════════════════════════════════════ -->
+			<section id="why">
+				<header>
+					<h2>Why Healthcare<br>Professionals<br>Trust Us</h2>
+				</header>
+				<div class="content">
+					<p><strong>We're not a franchise.</strong> We're neighbours who genuinely care about our community, trained to the same hygiene standards that inform healthcare environments.</p>
+
+					<!-- Subsection: Community -->
+					<section>
+						<header>
+							<h3>Community Impact</h3>
+							<p>Every booking with ClearPath directly supports a PEPP program participant — creating local jobs, building careers, and strengthening London's community economy. You're not just paying for a clean home; you're investing in someone's future.</p>
+						</header>
+						<div class="content">
+							<ul class="feature-icons">
+								<li class="icon solid fa-hands-helping">PEPP-trained team members</li>
+								<li class="icon solid fa-map-marker-alt">100% London-based staff</li>
+								<li class="icon solid fa-heart">Fully background-checked</li>
+								<li class="icon solid fa-shield-alt">Fully insured &amp; bonded</li>
+							</ul>
+						</div>
+					</section>
+
+					<!-- Subsection: Healthcare-Aware -->
+					<section>
+						<header>
+							<h3>Built for Shift Workers</h3>
+							<p>We understand the demands of healthcare. Early morning, evening, and weekend appointments available — so a clean home is always within reach, no matter your rotation.</p>
+						</header>
+						<div class="content">
+							<ul class="feature-icons">
+								<li class="icon solid fa-moon">Early-morning slots (6 AM+)</li>
+								<li class="icon solid fa-sun">Evening availability</li>
+								<li class="icon solid fa-calendar-alt">Flexible rescheduling</li>
+								<li class="icon solid fa-id-badge">Hospital badge discount</li>
+							</ul>
+						</div>
+					</section>
+
+					<!-- Subsection: Standards -->
+					<section>
+						<header>
+							<h3>Hospital-Grade Standards</h3>
+							<p>Our cleaning protocols are informed by infection-control principles — high-touch surfaces, proper disinfectant dwell times, and colour-coded cloths to prevent cross-contamination.</p>
+						</header>
+						<div class="content">
+							<ul class="feature-icons">
+								<li class="icon solid fa-spray-can">Hospital-grade disinfectants</li>
+								<li class="icon solid fa-check-circle">Satisfaction guaranteed</li>
+								<li class="icon solid fa-redo">Free re-clean if not happy</li>
+								<li class="icon solid fa-lock">No hidden fees, ever</li>
+							</ul>
+						</div>
+					</section>
+
+				</div>
+			</section>
+
+			<!-- ═══════════════════════════════════════════════
+			     SECTION 4 — Testimonials
+			     ═══════════════════════════════════════════════ -->
+			<section id="testimonials">
+				<header>
+					<h2>Loved by Hospital Staff</h2>
+				</header>
+				<div class="content">
+					<p><strong>Don't just take our word for it.</strong> Here's what nurses, paramedics, and physicians in London are saying about ClearPath.</p>
+
+					<div class="testimonial-card">
+						<div class="star-row">★★★★★</div>
+						<blockquote>"Coming home to a spotless apartment after a 12-hour shift at Victoria Hospital genuinely changed my life. These folks are professional, thorough, and just really kind people."</blockquote>
+						<div class="attribution">Sarah K. — RN, Victoria Hospital</div>
+					</div>
+
+					<div class="testimonial-card">
+						<div class="star-row">★★★★★</div>
+						<blockquote>"I appreciate that they use fragrance-free products without me even having to ask. As a nurse, that matters. Reliable, friendly, and so easy to book."</blockquote>
+						<div class="attribution">David M. — Paramedic, LHSC</div>
+					</div>
+
+					<div class="testimonial-card">
+						<div class="star-row">★★★★★</div>
+						<blockquote>"What I love most is knowing my money supports the PEPP program. It's a local, social enterprise that deserves every bit of support — and they clean brilliantly."</blockquote>
+						<div class="attribution">Patricia L. — Physician, St. Joseph's Health Care</div>
+					</div>
+
+					<div class="testimonial-card">
+						<div class="star-row">★★★★★</div>
+						<blockquote>"The post-shift express package is a lifesaver. I get home at 11 PM and wake up to a clean kitchen and bathroom. Absolutely worth every penny."</blockquote>
+						<div class="attribution">James T. — ICU Nurse, University Hospital</div>
+					</div>
+
+					<ul class="actions">
+						<li><a href="#contact" class="button primary scrolly">Book Your Clean Today</a></li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- ═══════════════════════════════════════════════
+			     SECTION 5 — Areas We Serve
+			     ═══════════════════════════════════════════════ -->
+			<section id="areas">
+				<header>
+					<h2>Serving London's Healthcare Community</h2>
+				</header>
+				<div class="content">
+					<p><strong>We go where you live.</strong> ClearPath serves all residential neighbourhoods within London, Ontario — with a special focus on areas close to the city's major hospital campuses.</p>
+
+					<ul class="service-pills">
+						<li>Victoria Hospital</li>
+						<li>University Hospital</li>
+						<li>St. Joseph's Health Care</li>
+						<li>Parkwood Institute</li>
+						<li>Children's Hospital</li>
+						<li>Byron</li>
+						<li>Old South</li>
+						<li>Wortley Village</li>
+						<li>White Oaks</li>
+						<li>Westmount</li>
+						<li>Masonville</li>
+						<li>Downtown Core</li>
+					</ul>
+
+					<div class="callout-box">
+						<strong>🏥 Hospital Staff Perk</strong>
+						<p>Show your hospital ID or employment badge when booking and receive a <strong>discounted rate on your first clean</strong>. This is our small way of saying thank you to the people who keep our city healthy.</p>
+					</div>
+
+					<p>Not sure if we cover your area? Reach out — we're always expanding. Same-week bookings may be available for healthcare workers coming off extended rotations.</p>
+				</div>
+			</section>
+
+			<!-- ═══════════════════════════════════════════════
+			     SECTION 6 — Contact / Booking Form
+			     ═══════════════════════════════════════════════ -->
+			<section id="contact">
+				<header>
+					<h2>Book Your Clean</h2>
+				</header>
+				<div class="content">
+					<p><strong>Ready for a cleaner home and more time to rest?</strong> Fill out the form below and we'll confirm your appointment within 24 hours. Healthcare staff — remember to mention your hospital for your staff discount!</p>
+
+					<form id="bookingForm" onsubmit="handleSubmit(event)">
+						<div class="fields">
+							<div class="field half">
+								<input type="text" name="firstName" id="firstName" placeholder="First Name" required />
+							</div>
+							<div class="field half">
+								<input type="text" name="lastName" id="lastName" placeholder="Last Name" required />
+							</div>
+							<div class="field half">
+								<input type="email" name="email" id="email" placeholder="Email Address" required />
+							</div>
+							<div class="field half">
+								<input type="tel" name="phone" id="phone" placeholder="Phone / Text Number" />
+							</div>
+							<div class="field">
+								<select name="service" id="service" required>
+									<option value="">— Select a Service —</option>
+									<option value="standard">Standard Home Clean</option>
+									<option value="deep">Deep Clean</option>
+									<option value="express">Post-Shift Express (Hospital Staff)</option>
+									<option value="movein">Move In / Move Out</option>
+									<option value="eco">Eco-Friendly Clean</option>
+									<option value="recurring">Recurring Package (Weekly / Bi-weekly / Monthly)</option>
+								</select>
+							</div>
+							<div class="field half">
+								<input type="date" name="preferredDate" id="preferredDate" placeholder="Preferred Date" required />
+							</div>
+							<div class="field half">
+								<select name="preferredTime" id="preferredTime">
+									<option value="">— Preferred Time —</option>
+									<option value="early">Early Morning (6–9 AM)</option>
+									<option value="morning">Morning (9 AM–12 PM)</option>
+									<option value="afternoon">Afternoon (12–4 PM)</option>
+									<option value="evening">Evening (4–7 PM)</option>
+								</select>
+							</div>
+							<div class="field">
+								<input type="text" name="hospital" id="hospital" placeholder="Hospital / Workplace (optional — for staff discount)" />
+							</div>
+							<div class="field">
+								<textarea name="notes" id="notes" placeholder="Additional notes — allergies, pets, access instructions, areas of focus..." rows="5"></textarea>
+							</div>
+						</div>
+						<ul class="actions">
+							<li><input type="submit" value="Send My Booking Request" class="button primary" /></li>
+							<li><input type="reset" value="Clear Form" class="button" /></li>
+						</ul>
+					</form>
+					<div class="form-success" id="formSuccess">
+						🎉 Thank you! We'll confirm your booking within 24 hours.
+					</div>
+				</div>
+
+				<!-- Contact footer -->
+				<footer>
+					<ul class="items">
+						<li>
+							<h3>Phone &amp; Text</h3>
+							<a href="tel:+15195550187">(519) 555-0187</a>
+						</li>
+						<li>
+							<h3>Email</h3>
+							<a href="mailto:hello@clearpathcleaning.ca">hello@clearpathcleaning.ca</a>
+						</li>
+						<li>
+							<h3>Hours</h3>
+							<span>Mon – Sat, 6 AM – 7 PM<br>Early &amp; evening slots for shift workers</span>
+						</li>
+						<li>
+							<h3>Find Us</h3>
+							<ul class="icons">
+								<li>
+									<a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a>
+								</li>
+								<li>
+									<a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a>
+								</li>
+								<li>
+									<a href="#" class="icon brands fa-google"><span class="label">Google Reviews</span></a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</footer>
+			</section>
+
+			<!-- Copyright -->
+			<div class="copyright">
+				&copy; 2025 ClearPath Cleaning Co. — London, Ontario.
+				Proudly part of the <strong>PEPP Program</strong>.
+				&nbsp;·&nbsp;
+				Site design based on <a href="https://html5up.net">HTML5 UP</a>.
+			</div>
+
+		</div><!-- /wrapper -->
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<script>
+			// Set date picker minimum to today
+			(function () {
+				var today = new Date().toISOString().split('T')[0];
+				var dp = document.getElementById('preferredDate');
+				if (dp) dp.min = today;
+			})();
+
+			// Form submission handler
+			function handleSubmit(e) {
+				e.preventDefault();
+
+				var firstName = document.getElementById('firstName').value.trim();
+				var email     = document.getElementById('email').value.trim();
+				var service   = document.getElementById('service').value;
+				var date      = document.getElementById('preferredDate').value;
+
+				if (!firstName || !email || !service || !date) {
+					alert('Please fill in your name, email, service type, and preferred date.');
+					return;
+				}
+
+				// Show success notice
+				var form    = document.getElementById('bookingForm');
+				var success = document.getElementById('formSuccess');
+				form.style.display = 'none';
+				success.classList.add('visible');
+
+				// Scroll to the success notice
+				success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+			}
+		</script>
+
+	</body>
+</html>
